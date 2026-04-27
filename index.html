@@ -1,3 +1,6 @@
+Index · HTML
+Copiar
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -607,6 +610,35 @@ function prevQ(){
   else{show('s-hero');}
 }
  
+function salvarLead(name, phone, cards){
+  // URL do Google Apps Script — substitua pela sua após publicar
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwD3nIkTZ7h-PjaQhSRAyB84XUukd6lTbkgHhOafHfchP2pLPMTTrUh8t8xAO2xu7MYag/exec';
+  if(!APPS_SCRIPT_URL || APPS_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbwD3nIkTZ7h-PjaQhSRAyB84XUukd6lTbkgHhOafHfchP2pLPMTTrUh8t8xAO2xu7MYag/exec') return;
+ 
+  const bancos = Array.isArray(answers.banco) ? answers.banco : [answers.banco||''];
+  const programas = Array.isArray(answers.programa) ? answers.programa : [answers.programa||''];
+ 
+  const payload = {
+    nome: name,
+    whatsapp: phone,
+    beneficio: answers.beneficio || '',
+    cia: answers.cia || '',
+    programa: programas,
+    gasto: answers.gasto || '',
+    banco: bancos,
+    tem_black: answers.tem_black || '',
+    cartao_atual: answers.qual_cartao || '',
+    cartoes_indicados: cards.map(c => c.name),
+  };
+ 
+  fetch(APPS_SCRIPT_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(payload)
+  }).catch(() => {});
+}
+ 
 function showResult(){
   const name=document.getElementById('inp-name').value.trim();
   const phone=document.getElementById('inp-phone').value.trim();
@@ -619,6 +651,7 @@ function showResult(){
   setTimeout(()=>{
     const cards=getRecommendations(answers);
     const analysis=getAnalysis(answers,name,cards);
+    salvarLead(name, phone, cards);
     renderResult(name,analysis,cards,phone);
   },4200);
 }
