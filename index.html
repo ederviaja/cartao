@@ -1,1 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '145877614265494');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=145877614265494&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<title>Qual é o cartão ideal para você? | Eder Viaja</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0E17;--bg2:#0F1322;--card:#141929;--card2:#1B2340;
+  --acc:#3E7BFA;--adim:#1E3A7A;--aglow:rgba(62,123,250,0.10);
+  --wh:#E8EAF0;--mt:#4A5580;--brd:rgba(62,123,250,0.22);--brd2:rgba(255,255,255,0.06);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--wh);min-height:100vh;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-thumb{background:var(--adim);border-radius:2px}
 
+header{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(12,14,23,0.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--brd2)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-wordmark{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;letter-spacing:2px;color:var(--wh);text-transform:uppercase}
+.hdr-link{font-size:12px;font-weight:600;color:var(--mt);text-decoration:none;letter-spacing:.5px;transition:color .2s}
+.hdr-link:hover{color:var(--wh)}
+
+.prog-wrap{position:fixed;top:60px;left:0;right:0;z-index:99;height:2px;background:var(--brd2)}
+.prog-fill{height:100%;background:var(--acc);transition:width .4s cubic-bezier(.4,0,.2,1);width:0}
+
+.screen{display:none;min-height:100vh;padding-top:60px}
+.screen.active{display:block}
+
+#s-hero{position:relative;overflow:hidden}
+.hero-glow{position:absolute;top:-15%;left:50%;transform:translateX(-50%);width:900px;height:600px;background:radial-gradient(ellipse,rgba(62,123,250,0.12) 0%,transparent 70%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--aglow) 1px,transparent 1px),linear-gradient(90deg,var(--aglow) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
+.hero-inner{position:relative;z-index:2;max-width:740px;margin:0 auto;padding:80px 24px 64px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--aglow);border:1px solid var(--brd);border-radius:100px;padding:6px 18px;font-size:11px;font-weight:600;letter-spacing:2px;color:var(--acc);text-transform:uppercase;margin-bottom:28px}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--acc);animation:blink 2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero-h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(46px,10vw,86px);line-height:.92;letter-spacing:-1.5px;color:var(--wh);margin-bottom:24px}
+.hero-h1 em{font-style:normal;color:var(--acc)}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--mt);line-height:1.65;margin-bottom:44px;max-width:480px}
+.btn-hero{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:14px;padding:18px 42px;cursor:pointer;transition:all .2s;text-decoration:none}
+.btn-hero:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.hero-proof{display:flex;align-items:center;gap:8px;margin-top:18px;font-size:13px;color:var(--mt)}
+.proof-dot{width:4px;height:4px;border-radius:50%;background:var(--mt)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;border-top:1px solid var(--brd2);border-left:1px solid var(--brd2);width:100%}
+.stat-item{text-align:center;padding:24px 16px;border-right:1px solid var(--brd2);border-bottom:1px solid var(--brd2)}
+.stat-n{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:34px;color:var(--acc);display:block}
+.stat-l{font-size:10px;font-weight:600;letter-spacing:1.5px;color:var(--mt);text-transform:uppercase;display:block;margin-top:4px}
+
+.faq-section{padding:64px 24px 0;max-width:880px;margin:0 auto}
+.faq-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(28px,5vw,42px);color:var(--wh);text-align:center;margin-bottom:8px}
+.faq-sub{font-size:15px;color:var(--mt);text-align:center;margin-bottom:44px}
+.faq-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.faq-card{background:var(--card);border:1px solid var(--brd2);border-radius:16px;padding:22px;cursor:pointer;transition:all .2s;position:relative}
+.faq-card:hover,.faq-card.open{border-color:var(--brd)}
+.faq-icon{width:36px;height:36px;border-radius:10px;background:var(--aglow);border:1px solid var(--brd);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.faq-icon svg{width:18px;height:18px;stroke:var(--acc);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.faq-q{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:var(--wh);line-height:1.2;padding-right:28px}
+.faq-a{font-size:13px;color:var(--mt);line-height:1.7;display:none;margin-top:10px}
+.faq-card.open .faq-a{display:block}
+.faq-toggle{position:absolute;top:18px;right:18px;width:22px;height:22px;border-radius:50%;border:1px solid var(--brd2);display:flex;align-items:center;justify-content:center;transition:all .2s}
+.faq-toggle svg{width:10px;height:10px;stroke:var(--mt);fill:none;stroke-width:2;stroke-linecap:round;transition:all .2s}
+.faq-card.open .faq-toggle{background:var(--acc);border-color:var(--acc)}
+.faq-card.open .faq-toggle svg{stroke:#fff;transform:rotate(45deg)}
+.faq-bottom-cta{text-align:center;padding:48px 24px 64px}
+.faq-bottom-cta p{font-size:15px;color:var(--mt);margin-bottom:20px}
+
+/* QUIZ */
+#s-quiz{min-height:100vh;display:none;align-items:center;justify-content:center;padding:72px 20px 40px}
+#s-quiz.active{display:flex}
+.quiz-wrap{width:100%;max-width:620px}
+.q-tag{font-size:11px;font-weight:600;letter-spacing:2.5px;color:var(--mt);text-transform:uppercase;margin-bottom:12px}
+.q-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(28px,5vw,44px);line-height:1.05;color:var(--wh);margin-bottom:8px}
+.q-hint{font-size:13px;color:var(--mt);margin-bottom:22px;line-height:1.5}
+.q-opts{display:flex;flex-direction:column;gap:8px}
+
+/* Opção simples */
+.q-opt{background:var(--card);border:1px solid var(--brd2);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:14px;cursor:pointer;transition:all .15s;position:relative;overflow:hidden}
+.q-opt::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--acc);transform:scaleY(0);transition:transform .18s}
+.q-opt:hover{border-color:var(--brd);background:var(--card2)}.q-opt:hover::before{transform:scaleY(1)}
+.q-opt.sel{border-color:var(--acc);background:var(--card2)}.q-opt.sel::before{transform:scaleY(1)}
+.opt-l{width:30px;height:30px;border-radius:7px;background:var(--card2);border:1px solid var(--brd2);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;color:var(--mt);flex-shrink:0;transition:all .15s;margin-top:2px}
+.q-opt.sel .opt-l{background:var(--acc);border-color:var(--acc);color:#fff}
+
+/* Opção múltipla escolha */
+.q-opt-multi{background:var(--card);border:1px solid var(--brd2);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .15s;position:relative;overflow:hidden}
+.q-opt-multi:hover{border-color:var(--brd);background:var(--card2)}
+.q-opt-multi.sel{border-color:var(--acc);background:var(--card2)}
+.opt-check{width:22px;height:22px;border-radius:6px;background:var(--card2);border:1px solid var(--brd2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .15s}
+.q-opt-multi.sel .opt-check{background:var(--acc);border-color:var(--acc)}
+.opt-check svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .15s}
+.q-opt-multi.sel .opt-check svg{opacity:1}
+.multi-hint{font-size:11px;color:var(--acc);margin-bottom:8px;font-weight:500}
+
+.opt-txt{font-size:15px;font-weight:500;color:var(--wh);line-height:1.3}
+.opt-detail{font-size:12px;color:var(--mt);margin-top:3px;line-height:1.4}
+.q-nav{display:flex;align-items:center;justify-content:space-between;margin-top:24px}
+.btn-back{background:transparent;border:1px solid var(--brd2);color:var(--mt);border-radius:10px;padding:11px 18px;cursor:pointer;font-size:13px;font-weight:500;transition:all .18s}
+.btn-back:hover{border-color:var(--mt);color:var(--wh)}
+.btn-next{background:var(--acc);color:#fff;border:none;border-radius:10px;padding:12px 26px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:1px;text-transform:uppercase;transition:all .18s;opacity:.35;pointer-events:none}
+.btn-next.rdy{opacity:1;pointer-events:auto}.btn-next.rdy:hover{filter:brightness(1.1)}
+
+/* Input de texto para cartão atual */
+.q-input{background:var(--card);border:1px solid var(--brd2);border-radius:12px;padding:14px 18px;color:var(--wh);font-size:15px;font-family:'Barlow',sans-serif;width:100%;outline:none;transition:border-color .2s;margin-top:4px}
+.q-input:focus{border-color:var(--brd)}
+.q-input::placeholder{color:var(--mt)}
+
+#s-capture{min-height:100vh;display:none;align-items:center;justify-content:center;padding:72px 20px 40px}
+#s-capture.active{display:flex}
+.cap-wrap{width:100%;max-width:480px;text-align:center}
+.cap-icon{width:68px;height:68px;background:var(--aglow);border:1px solid var(--brd);border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.cap-icon svg{width:32px;height:32px;stroke:var(--acc);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cap-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1;color:var(--wh);margin-bottom:12px}
+.cap-sub{font-size:15px;color:var(--mt);line-height:1.65;margin-bottom:32px}
+.cap-form{display:flex;flex-direction:column;gap:10px}
+.form-row{background:var(--card);border:1px solid var(--brd2);border-radius:12px;padding:14px 18px;display:flex;align-items:center;gap:12px;transition:border-color .2s}
+.form-row:focus-within{border-color:var(--brd)}
+.form-row svg{width:20px;height:20px;stroke:var(--mt);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.form-row input{background:transparent;border:none;outline:none;color:var(--wh);font-size:15px;font-family:'Barlow',sans-serif;width:100%}
+.form-row input::placeholder{color:var(--mt)}
+.btn-cap{background:var(--acc);color:#fff;border:none;border-radius:12px;padding:16px;cursor:pointer;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:1.5px;text-transform:uppercase;transition:all .2s;margin-top:4px}
+.btn-cap:hover{filter:brightness(1.1)}
+.cap-fine{font-size:11px;color:var(--mt);margin-top:14px;line-height:1.5}
+
+#s-loading{min-height:100vh;display:none;align-items:center;justify-content:center}
+#s-loading.active{display:flex}
+.ld-inner{text-align:center;padding:0 20px}
+.ld-ring{width:60px;height:60px;border:2px solid var(--brd2);border-top-color:var(--acc);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 24px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ld-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:28px;color:var(--wh);margin-bottom:8px}
+.ld-sub{font-size:14px;color:var(--mt)}
+.ld-steps{display:flex;flex-direction:column;gap:8px;max-width:290px;margin:28px auto 0;text-align:left}
+.ld-step{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--mt);padding:9px 12px;border-radius:8px;background:var(--card);border:1px solid var(--brd2);transition:all .3s}
+.ld-step.done,.ld-step.act{color:var(--wh)}
+.ld-step .dot{width:6px;height:6px;border-radius:50%;background:var(--mt);flex-shrink:0;transition:background .3s}
+.ld-step.done .dot,.ld-step.act .dot{background:var(--acc)}
+.ld-step.act .dot{animation:blink .8s infinite}
+
+#s-result{padding:72px 20px 60px;display:none}
+#s-result.active{display:block}
+.res-wrap{width:100%;max-width:720px;margin:0 auto}
+.res-hdr{text-align:center;margin-bottom:40px}
+.res-eye{display:inline-block;font-size:11px;font-weight:600;letter-spacing:2px;color:var(--acc);text-transform:uppercase;margin-bottom:10px}
+.res-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(32px,6vw,52px);line-height:1;color:var(--wh);margin-bottom:8px}
+.res-sub{font-size:14px;color:var(--mt)}
+.ai-box{background:var(--card);border:1px solid var(--brd);border-radius:16px;padding:28px;margin-bottom:24px;position:relative;overflow:hidden}
+.ai-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--acc) 0%,transparent 100%)}
+.ai-badge{display:inline-flex;align-items:center;gap:6px;background:var(--aglow);border:1px solid var(--brd);border-radius:100px;padding:4px 12px;font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--acc);text-transform:uppercase;margin-bottom:16px}
+.ai-text{font-size:15px;line-height:1.85;color:#C0CADF;white-space:pre-line}
+
+/* Card atual — comparação */
+.card-atual-box{background:var(--card2);border:1px solid var(--brd);border-radius:12px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.card-atual-label{font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--mt);text-transform:uppercase;display:block;margin-bottom:4px}
+.card-atual-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;color:var(--wh)}
+.card-atual-verdict{font-size:13px;margin-top:4px;line-height:1.4}
+.verdict-ok{color:#4ADE80}
+.verdict-up{color:#FACC15}
+
+.cards-list{display:flex;flex-direction:column;gap:12px;margin-bottom:40px}
+.c-item{background:var(--card);border:1px solid var(--brd2);border-radius:16px;overflow:hidden;transition:border-color .2s;position:relative}
+.c-item:hover{border-color:var(--brd)}.c-item.top{border-color:var(--acc)}
+.c-badge{position:absolute;top:0;right:0;background:var(--acc);font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;color:#fff;padding:5px 14px;border-radius:0 16px 0 10px}
+.c-main{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:20px 22px}
+.c-rank{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:38px;color:var(--adim);text-align:center;line-height:1}
+.c-item.top .c-rank{color:var(--acc)}
+.c-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--wh);margin-bottom:3px}
+.c-bank{font-size:11px;color:var(--mt);margin-bottom:8px}
+.c-tags{display:flex;flex-wrap:wrap;gap:5px}
+.c-tag{font-size:11px;font-weight:500;padding:3px 9px;border-radius:100px;background:var(--card2);border:1px solid var(--brd2);color:var(--mt)}
+.c-pts{text-align:right;flex-shrink:0}
+.pts-n{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;color:var(--acc);display:block}
+.pts-l{font-size:10px;color:var(--mt);letter-spacing:1px;text-transform:uppercase}
+.c-benefits{border-top:1px solid var(--brd2);padding:14px 22px;display:grid;grid-template-columns:repeat(3,1fr)}
+.c-ben{padding:10px 12px;border-right:1px solid var(--brd2);text-align:center}
+.c-ben:last-child{border-right:none}
+.ben-l{font-size:10px;font-weight:600;letter-spacing:1px;color:var(--mt);text-transform:uppercase;display:block;margin-bottom:4px}
+.ben-v{font-size:13px;font-weight:600;color:var(--wh);display:block;line-height:1.3}
+.ben-v.acc{color:var(--acc)}
+
+.cta-final{text-align:center;padding:8px 0 0}
+.cta-final-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(30px,5vw,48px);line-height:1;color:var(--wh);margin-bottom:12px}
+.cta-final-sub{font-size:15px;color:var(--mt);margin-bottom:32px;max-width:440px;margin-left:auto;margin-right:auto}
+.cta-final-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-cta-main{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:14px;padding:18px 42px;cursor:pointer;transition:all .2s;text-decoration:none}
+.btn-cta-main:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.btn-cta-sec{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--wh);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--brd);border-radius:14px;padding:17px 32px;cursor:pointer;transition:all .2s;text-decoration:none}
+.btn-cta-sec:hover{border-color:var(--acc);color:var(--acc)}
+
+footer{text-align:center;padding:40px 24px 24px;border-top:1px solid var(--brd2);font-size:12px;color:var(--mt)}
+
+@media(max-width:540px){
+  .c-main{grid-template-columns:36px 1fr}.c-pts{grid-column:2;justify-self:start;margin-top:-4px}
+  .c-benefits{grid-template-columns:1fr 1fr}.c-ben:nth-child(2){border-right:none}.c-ben:nth-child(3){border-top:1px solid var(--brd2);grid-column:1/-1;border-right:none}
+  .cta-final-btns{flex-direction:column;align-items:stretch}.btn-cta-main,.btn-cta-sec{justify-content:center}
+  .faq-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="#">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAZACAYAAACYPV/GAABQ00lEQVR4nOzdSZLcSBJFQWRL3f/K1QsWyRxiwOBwt0H1BMHcIAJP7HPbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA5PlZ/AAAAAAAA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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJDXj58/f/7c/SMAAAAAAAAAuO+f3T8AAAAAAAAAgDEEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCIEYAAAAAAAAIAiBGAAAAAAAACAIgRgAAAAAAAAgCL+D4A6paYjJvFuAAAAAElFTkSuQmCC" style="height:44px;width:auto;display:block;" alt="Eder Viaja"/>
+    <span class="brand-wordmark">Ederviaja</span>
+  </a>
+  <a href="https://instagram.com/ederviaja" target="_blank" class="hdr-link">@ederviaja →</a>
+</header>
+<div class="prog-wrap"><div class="prog-fill" id="prog"></div></div>
+
+<section class="screen active" id="s-hero">
+  <div class="hero-glow"></div><div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">Análise gratuita e personalizada</div>
+    <h1 class="hero-h1">Qual é o<br>cartão <em>ideal</em><br>para você?</h1>
+    <p class="hero-sub">Responda algumas perguntas rápidas e descubra os 3 cartões que combinam com o seu perfil — ou veja se o que você já tem está valendo a pena.</p>
+    <button class="btn-hero" onclick="goQuiz()">Descobrir meu cartão ideal →</button>
+    <div class="hero-proof">
+      <span>Análise gratuita</span><div class="proof-dot"></div>
+      <span>40+ cartões comparados</span><div class="proof-dot"></div>
+      <span>Resultado em segundos</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-n">40+</span><span class="stat-l">Cartões</span></div>
+      <div class="stat-item"><span class="stat-n">100%</span><span class="stat-l">Gratuito</span></div>
+      <div class="stat-item"><span class="stat-n">2 min</span><span class="stat-l">Resultado</span></div>
+    </div>
+  </div>
+  <div class="faq-section">
+    <h2 class="faq-title">Dúvidas frequentes sobre cartões</h2>
+    <p class="faq-sub">O que todo mundo pergunta antes de escolher um cartão</p>
+    <div class="faq-grid" id="faq-grid"></div>
+  </div>
+  <div class="faq-bottom-cta">
+    <p>Já tirou suas dúvidas? Descubra qual é o seu cartão ideal agora.</p>
+    <button class="btn-hero" onclick="goQuiz()">Fazer minha análise gratuita →</button>
+  </div>
+</section>
+
+<section class="screen" id="s-quiz">
+  <div class="quiz-wrap">
+    <div class="q-tag" id="q-tag">Pergunta 1</div>
+    <h2 class="q-title" id="q-title"></h2>
+    <p class="q-hint" id="q-hint"></p>
+    <div class="q-opts" id="q-opts"></div>
+    <div class="q-nav">
+      <button class="btn-back" id="btn-back" onclick="prevQ()">← Voltar</button>
+      <button class="btn-next" id="btn-next" onclick="nextQ()">Próximo →</button>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="s-capture">
+  <div class="cap-wrap">
+    <div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg></div>
+    <h2 class="cap-title">Seu perfil está pronto!</h2>
+    <p class="cap-sub">Informe seu nome e WhatsApp para receber a análise completa com os 3 cartões indicados para você.</p>
+    <div class="cap-form">
+      <div class="form-row">
+        <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <input type="text" id="inp-name" placeholder="Seu primeiro nome" autocomplete="given-name"/>
+      </div>
+      <div class="form-row">
+        <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        <input type="tel" id="inp-phone" placeholder="(43) 99999-9999" autocomplete="tel"/>
+      </div>
+      <button class="btn-cap" onclick="showResult()">Ver minha análise gratuita →</button>
+    </div>
+    <p class="cap-fine">Sem spam. Seus dados são usados somente para enviar sua análise.</p>
+  </div>
+</section>
+
+<section class="screen" id="s-loading">
+  <div class="ld-inner">
+    <div class="ld-ring"></div>
+    <h2 class="ld-title">Analisando seu perfil...</h2>
+    <p class="ld-sub">Cruzando com 40+ cartões do mercado</p>
+    <div class="ld-steps">
+      <div class="ld-step act" id="ls1"><div class="dot"></div>Lendo seu perfil</div>
+      <div class="ld-step" id="ls2"><div class="dot"></div>Comparando 40+ cartões</div>
+      <div class="ld-step" id="ls3"><div class="dot"></div>Montando sua análise</div>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="s-result">
+  <div class="res-wrap">
+    <div class="res-hdr">
+      <div class="res-eye" id="r-eye"></div>
+      <h2 class="res-title" id="r-title">Seus 3 cartões ideais</h2>
+      <p class="res-sub">Baseado no seu perfil — atualizado Abril/2025</p>
+    </div>
+    <div id="card-atual-section"></div>
+    <div class="ai-box">
+      <div class="ai-badge">✦ Análise Éder Viaja</div>
+      <div class="ai-text" id="ai-text"></div>
+    </div>
+    <div class="cards-list" id="cards-list"></div>
+    <div class="cta-final">
+      <h3 class="cta-final-title" id="cta-title">Quer usar esses pontos para voar?</h3>
+      <p class="cta-final-sub" id="cta-sub">Me segue no Instagram para aprender a comprar passagens com desconto usando seus pontos.</p>
+      <div class="cta-final-btns">
+        <a href="https://instagram.com/ederviaja" target="_blank" class="btn-cta-main">Seguir no Instagram →</a>
+        <a href="#" class="btn-cta-sec" id="cta-wpp">Falar com o Éder no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Eder Viaja · ederviaja.com.br · Análise de Cartões 2025</footer>
+
+<script>
+const WHATSAPP='5543984835409';
+
+const faqIcons={
+  pts:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+  vip:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+  card:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`,
+  bank:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>`,
+  miles:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+  plane:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2l3.5 3.5L3 12l3 3 3-2.3L12.3 21z"/></svg>`,
+};
+
+const faqs=[
+  {icon:'pts',q:'O que são pontos por real gasto?',a:'Cada real gasto no cartão gera pontos que vão para programas como Livelo, Smiles, TudoAzul ou LATAM Pass. Esses pontos podem ser trocados por passagens aéreas. Quanto maior a taxa, mais milhas você acumula com os mesmos gastos.'},
+  {icon:'vip',q:'O que é sala VIP no aeroporto?',a:'Lounges exclusivos com buffet, bebidas, Wi-Fi e conforto para esperar o voo. Muitos cartões premium oferecem acesso gratuito — ilimitado ou com número fixo de visitas. Dragon Pass, Priority Pass e LoungeKey dão acesso a mais de 1.000 salas no mundo.'},
+  {icon:'card',q:'Vale a pena pagar anuidade?',a:'Depende do quanto você gasta. Se você passa R$5.000+/mês no cartão, a anuidade quase sempre se paga com os benefícios. Vários cartões isentam a anuidade se você bater uma meta de gastos mensais.'},
+  {icon:'bank',q:'Preciso trocar de banco para ter um cartão melhor?',a:'Não. Muitos dos melhores cartões de 2025 são de fintechs (C6, XP, Inter, BTG, Nubank) que não exigem conta corrente. Você pode ter um cartão top sem mudar seu banco principal.'},
+  {icon:'plane',q:'Smiles, LATAM Pass ou TudoAzul — qual é melhor?',a:'Depende de onde você voa. Se voa mais pela Azul, o TudoAzul faz mais sentido. LATAM Pass é forte para internacionais. Smiles é bom para nacionais pela GOL. O ideal é acumular no programa da CIA que você mais usa.'},
+  {icon:'miles',q:'Como acumular milhas mais rápido?',a:'Concentre todos os gastos em um cartão de alta pontuação — contas fixas, supermercado, combustível. Com R$5.000/mês em um bom cartão você acumula passagens internacionais em menos de 1 ano.'},
+];
+
+// FLUXO DE PERGUNTAS — dinâmico com bifurcação
+// questions é um array de funções que retornam o objeto de pergunta
+// isso permite bifurcar baseado em respostas anteriores
+const answers={};
+let flow=[]; // sequência de IDs de perguntas a serem mostradas
+let cur=0;   // índice atual no flow
+
+const allQuestions={
+  beneficio:{
+    id:'beneficio',
+    q:'Qual benefício mais importa pra você?',
+    hint:'Sua resposta define qual cartão aparece em #1 na sua análise.',
+    type:'single',
+    opts:[
+      {t:'Acumular o máximo de milhas',d:'Priorizamos pts por real gasto — quanto mais, melhor'},
+      {t:'Acesso a sala VIP no aeroporto',d:'Dragon Pass, LoungeKey, Priority Pass — lounge no mundo todo'},
+      {t:'Zero anuidade — não quero pagar nada',d:'Só cartões com isenção real ou anuidade zero'},
+      {t:'Viajar sempre pela mesma companhia',d:'Cartões co-brandados com status e benefícios exclusivos'},
+      {t:'Cartão fácil de conseguir agora',d:'Aprovação sem burocracia, sem exigências complexas'},
+    ]
+  },
+  cia:{
+    id:'cia',
+    q:'Qual companhia aérea você usa mais?',
+    hint:'Isso define se um cartão co-brandado faz sentido pra você.',
+    type:'single',
+    opts:[
+      {t:'Azul',d:'TudoAzul — Companion Pass, status Diamante e 2 bags grátis'},
+      {t:'LATAM',d:'LATAM Pass — upgrades de cabine e salas VIP LATAM'},
+      {t:'GOL',d:'Smiles — Lounge GOL ilimitado em GRU e GIG'},
+      {t:'TAP ou outras internacionais',d:'TAP Miles&Go — Lounge Lisboa e Star Alliance'},
+      {t:'Vario muito, não tenho preferência',d:'Priorizamos Livelo ou Esfera — transferem para todas as CIAs'},
+    ]
+  },
+  programa:{
+    id:'programa',
+    q:'Você já tem algum programa de fidelidade ativo?',
+    hint:'Pode marcar mais de um.',
+    type:'multi',
+    opts:[
+      {t:'TudoAzul'},{t:'LATAM Pass'},{t:'Smiles'},{t:'Livelo'},{t:'Esfera'},{t:'Nenhum ainda'},
+    ]
+  },
+  viagens:{
+    id:'viagens',
+    q:'Quantas vezes por ano você viaja de avião?',
+    hint:'Quem viaja mais se beneficia muito mais dos cartões premium.',
+    type:'single',
+    opts:[
+      {t:'Nunca ou raramente',d:'Focamos em acúmulo de pontos para a próxima viagem'},
+      {t:'1 a 2 vezes por ano',d:'Vale ter um cartão que acumule bem para essas viagens'},
+      {t:'3 a 5 vezes por ano',d:'Sala VIP e status já fazem muito sentido'},
+      {t:'Mais de 5 vezes por ano',d:'Cartão premium com VIP ilimitado é quase obrigatório'},
+    ]
+  },
+  gasto:{
+    id:'gasto',
+    q:'Pensando no último mês, quanto você gastou no seu cartão?',
+    hint:'Isso define se a anuidade pode ser zerada pelos seus gastos.',
+    type:'single',
+    opts:[
+      {t:'Menos de R$ 2.000',d:'Focamos em cartões sem anuidade ou com isenção fácil'},
+      {t:'Entre R$ 2.000 e R$ 5.000',d:'Você já consegue zerar a anuidade de bons cartões'},
+      {t:'Entre R$ 5.000 e R$ 10.000',d:'Acesso a cartões Black com anuidade zero'},
+      {t:'Mais de R$ 10.000',d:'Qualquer cartão do mercado está ao seu alcance'},
+    ]
+  },
+  banco:{
+    id:'banco',
+    q:'Você tem conta em algum desses bancos?',
+    hint:'Pode marcar mais de um — ter relacionamento facilita a aprovação.',
+    type:'multi',
+    opts:[
+      {t:'Nubank'},{t:'Bradesco'},{t:'Santander'},{t:'Itaú'},{t:'Inter'},{t:'XP'},{t:'C6'},{t:'Banco do Brasil'},{t:'Caixa'},{t:'Nenhum desses'},
+    ]
+  },
+  categoria:{
+    id:'categoria',
+    q:'Onde você mais gasta no dia a dia?',
+    hint:'Alguns cartões dão pontuação extra em categorias específicas.',
+    type:'single',
+    opts:[
+      {t:'Supermercado e mercado',d:''},{t:'Restaurantes e delivery',d:''},{t:'Combustível e pedágio',d:''},
+      {t:'Compras online',d:''},{t:'Gasto distribuído em tudo',d:'Priorizamos cartão com boa pontuação base em todas as compras'},
+    ]
+  },
+  tem_black:{
+    id:'tem_black',
+    q:'Você já tem algum cartão Black ou Infinite hoje?',
+    hint:'Isso nos ajuda a entender seu ponto de partida.',
+    type:'single',
+    opts:[
+      {t:'Sim, já tenho um',d:'Vamos ver se ele é o melhor para o seu perfil ou se vale trocar'},
+      {t:'Não tenho ainda',d:'Perfeito — vamos indicar a porta de entrada certa'},
+      {t:'Não sei o que é isso',d:'Sem problema — começamos do zero'},
+    ]
+  },
+  qual_cartao:{
+    id:'qual_cartao',
+    q:'Qual cartão você tem hoje?',
+    hint:'Digite o nome do cartão para verificarmos se ele é o ideal para o seu perfil.',
+    type:'text',
+    placeholder:'Ex: Nubank Ultravioleta, C6 Carbon, Itaú Personnalité...'
+  },
+  concentracao:{
+    id:'concentracao',
+    q:'Você concentra tudo num cartão só ou divide entre vários?',
+    hint:'Concentrar gastos é a estratégia mais eficiente para acumular.',
+    type:'single',
+    opts:[
+      {t:'Concentro tudo em um só',d:'Estratégia ideal para acumular rápido'},
+      {t:'Divido entre 2 ou 3',d:'Vamos indicar o principal para concentrar mais'},
+      {t:'Uso pouco o cartão ainda',d:'Vamos mostrar como transformar isso em milhas'},
+      {t:'Quero começar a usar mais',d:'Ótimo momento — vamos te dar o cartão certo para começar'},
+    ]
+  },
+  anuidade:{
+    id:'anuidade',
+    q:'Você topa pagar anuidade se os benefícios compensarem?',
+    hint:'Muitos cartões isentam a anuidade se você bater a meta de gastos.',
+    type:'single',
+    opts:[
+      {t:'Não — quero gratuito ou com isenção',d:'Temos ótimas opções sem custo anual'},
+      {t:'Topo até R$ 500 por ano',d:''},
+      {t:'Topo até R$ 1.500 por ano',d:'Abre cartões Black e Infinite com salas VIP'},
+      {t:'Pago qualquer valor se valer a pena',d:'Acesso aos cartões mais exclusivos do Brasil'},
+    ]
+  },
+};
+
+function buildFlow(){
+  // Fluxo base
+  const base=['beneficio','cia','programa','viagens','gasto','banco','categoria','tem_black'];
+  // Se tem Black = sim, insere pergunta do qual cartão
+  // concentracao e anuidade sempre no final
+  flow=base;
+  if(answers.tem_black==='Sim, já tenho um'){
+    flow=[...base,'qual_cartao','concentracao','anuidade'];
+  } else {
+    flow=[...base,'concentracao','anuidade'];
+  }
+}
+
+function totalSteps(){return flow.length}
+function currentQ(){return allQuestions[flow[cur]]}
+
+document.getElementById('faq-grid').innerHTML='';
+faqs.forEach(f=>{
+  const d=document.createElement('div');
+  d.className='faq-card';
+  d.innerHTML=`<div class="faq-icon">${faqIcons[f.icon]}</div><div class="faq-q">${f.q}</div><div class="faq-a">${f.a}</div><div class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>`;
+  d.onclick=()=>d.classList.toggle('open');
+  document.getElementById('faq-grid').appendChild(d);
+});
+
+function goQuiz(){
+  cur=0;
+  buildFlow();
+  show('s-quiz');
+  renderQ();
+}
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+  upProg();
+}
+function upProg(){
+  const total=totalSteps();
+  const m={'s-hero':0,'s-quiz':Math.round(((cur+1)/total)*70),'s-capture':78,'s-loading':88,'s-result':100};
+  const a=document.querySelector('.screen.active');
+  if(!a)return;
+  document.getElementById('prog').style.width=(m[a.id]??0)+'%';
+}
+
+function renderQ(){
+  const q=currentQ();
+  if(!q)return;
+  document.getElementById('q-tag').textContent=`Pergunta ${cur+1} de ${totalSteps()}`;
+  document.getElementById('q-title').textContent=q.q;
+  document.getElementById('q-hint').textContent=q.hint||'';
+  document.getElementById('btn-back').style.visibility=cur===0?'hidden':'visible';
+  const c=document.getElementById('q-opts');
+  c.innerHTML='';
+
+  if(q.type==='text'){
+    const inp=document.createElement('input');
+    inp.type='text';
+    inp.className='q-input';
+    inp.placeholder=q.placeholder||'Digite aqui...';
+    inp.value=answers[q.id]||'';
+    inp.oninput=()=>{
+      answers[q.id]=inp.value.trim();
+      document.getElementById('btn-next').classList.toggle('rdy',inp.value.trim().length>0);
+    };
+    c.appendChild(inp);
+    document.getElementById('btn-next').classList.toggle('rdy',(answers[q.id]||'').length>0);
+  } else if(q.type==='multi'){
+    const hint=document.createElement('div');
+    hint.className='multi-hint';
+    hint.textContent='Pode marcar mais de uma opção';
+    c.appendChild(hint);
+    if(!Array.isArray(answers[q.id])) answers[q.id]=[];
+    q.opts.forEach(o=>{
+      const d=document.createElement('div');
+      d.className='q-opt-multi'+(answers[q.id].includes(o.t)?' sel':'');
+      d.innerHTML=`<div class="opt-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div><div class="opt-txt">${o.t}</div>`;
+      d.onclick=()=>{
+        if(answers[q.id].includes(o.t)){
+          answers[q.id]=answers[q.id].filter(x=>x!==o.t);
+          d.classList.remove('sel');
+        } else {
+          answers[q.id]=[...answers[q.id],o.t];
+          d.classList.add('sel');
+        }
+        document.getElementById('btn-next').classList.toggle('rdy',answers[q.id].length>0);
+      };
+      c.appendChild(d);
+    });
+    document.getElementById('btn-next').classList.toggle('rdy',(answers[q.id]||[]).length>0);
+  } else {
+    const L='ABCDE';
+    q.opts.forEach((o,i)=>{
+      const d=document.createElement('div');
+      d.className='q-opt'+(answers[q.id]===o.t?' sel':'');
+      d.innerHTML=`<div class="opt-l">${L[i]||i+1}</div><div><div class="opt-txt">${o.t}</div>${o.d?`<div class="opt-detail">${o.d}</div>`:''}</div>`;
+      d.onclick=()=>{
+        c.querySelectorAll('.q-opt').forEach(x=>x.classList.remove('sel'));
+        d.classList.add('sel');
+        answers[q.id]=o.t;
+        document.getElementById('btn-next').classList.add('rdy');
+      };
+      c.appendChild(d);
+    });
+    document.getElementById('btn-next').classList.toggle('rdy',!!answers[q.id]);
+  }
+  upProg();
+}
+
+function nextQ(){
+  const q=currentQ();
+  if(!q)return;
+  // Valida
+  if(q.type==='multi'&&(!answers[q.id]||!answers[q.id].length))return;
+  if(q.type==='single'&&!answers[q.id])return;
+  if(q.type==='text'&&!answers[q.id])return;
+
+  // Recalcula flow se acabou de responder tem_black
+  if(q.id==='tem_black') buildFlow();
+
+  if(cur<flow.length-1){
+    cur++;
+    renderQ();
+  } else {
+    show('s-capture');
+  }
+}
+function prevQ(){
+  if(cur>0){cur--;renderQ();}
+  else{show('s-hero');}
+}
+
+function showResult(){
+  const name=document.getElementById('inp-name').value.trim();
+  const phone=document.getElementById('inp-phone').value.trim();
+  if(!name||!phone){alert('Por favor, preencha seu nome e WhatsApp.');return}
+  window._name=name;
+  show('s-loading');
+  const steps=['ls1','ls2','ls3'];let i=0;
+  const tick=()=>{if(i>0)document.getElementById(steps[i-1]).classList.replace('act','done');if(i<steps.length){document.getElementById(steps[i]).classList.add('act');i++;setTimeout(tick,1300)}};
+  tick();
+  setTimeout(()=>{
+    const cards=getRecommendations(answers);
+    const analysis=getAnalysis(answers,name,cards);
+    renderResult(name,analysis,cards,phone);
+  },4200);
+}
+
+// Banco de cartões
+const cardDB={
+  brb_dux:{name:'BRB DUX',bank:'BRB',pts:'5,0 pts/$',anuidade:'12x R$ 140/mês',vip:'LoungeKey + Priority Pass ilimitados',isentar:'Zero com R$ 35.000/mês',tags:['Visa Infinite','VIP Ilimitado','Melhor do Brasil']},
+  c6:{name:'C6 Carbon',bank:'C6 Bank',pts:'3,5 pts/$',anuidade:'12x R$ 98/mês',vip:'4 Dragon Pass/ano + MC Black GRU ilimitada',isentar:'Zero com R$ 8.000/mês',tags:['Mastercard Black','Fácil aprovação','Dragon Pass']},
+  xp:{name:'XP Visa Infinite',bank:'XP Investimentos',pts:'3,0 pts/$',anuidade:'Gratuito',vip:'4 Dragon Pass/ano',isentar:'Gratuita com R$ 50k+ na XP',tags:['Zero anuidade','Visa Infinite','Dragon Pass']},
+  s_unlimited:{name:'Santander Unlimited',bank:'Santander',pts:'3,5 pts/$',anuidade:'12x R$ 183/mês',vip:'LoungeKey ilimitado',isentar:'Zero com R$ 30.000/mês',tags:['Visa+Master','VIP Ilimitado','Alta renda']},
+  s_unique:{name:'Santander Unique',bank:'Santander',pts:'5,4 pts/$ Bateu Ganhou',anuidade:'12x R$ 96/mês',vip:'2 LoungeKey/ano',isentar:'Zero com R$ 8.000/mês',tags:['Bateu Ganhou','Mastercard Black','Porta de entrada']},
+  latam_vi:{name:'LATAM Pass Visa Infinite',bank:'Itaú',pts:'5,9 pts/$',anuidade:'12x R$ 105/mês',vip:'VIP LATAM ilimitado + 2 Dragon Pass',isentar:'Zero com R$ 20.000/mês',tags:['LATAM Pass','Visa Infinite','VIP LATAM']},
+  latam_mb:{name:'LATAM Pass Mastercard Black',bank:'Itaú',pts:'5,25 pts/$',anuidade:'12x R$ 105/mês',vip:'VIP LATAM + MC GRU ilimitada',isentar:'Zero com R$ 20.000/mês',tags:['LATAM Pass','Mastercard Black','VIP LATAM']},
+  azul:{name:'Tudo Azul Visa Infinite',bank:'Itaú',pts:'5,25 pts/$',anuidade:'12x R$ 105/mês',vip:'Sala VIP Azul + 2 Dragon Pass',isentar:'Zero com R$ 20.000/mês',tags:['TudoAzul','Companion Pass','Visa Infinite']},
+  smiles:{name:'Smiles Visa Infinite',bank:'Banco do Brasil',pts:'5,5 pts/$',anuidade:'12x R$ 99/mês',vip:'Lounge GOL ilimitado',isentar:'Zero com R$ 15.000/mês',tags:['Smiles','Lounge GOL','Visa Infinite']},
+  tap:{name:'TAP Miles&Go Black',bank:'BTG Pactual',pts:'4,0 pts/$',anuidade:'12x R$ 105/mês',vip:'4 LoungeKey + TAP Lounge Lisboa',isentar:'Zero com R$ 10.000/mês',tags:['TAP','Menor anuidade','LoungeKey']},
+  inter:{name:'Inter Black',bank:'Banco Inter',pts:'1 pt/R$2,50',anuidade:'Gratuito',vip:'6 Priority Pass/ano',isentar:'Gratuita com investimento no Inter',tags:['Zero anuidade','Priority Pass','Fácil']},
+  aa:{name:'AAdvantage Black',bank:'Santander',pts:'5,0 pts/$',anuidade:'12x R$ 136/mês',vip:'4 LoungeKey + MC GRU',isentar:'50% com R$ 150k no Santander',tags:['American Airlines','Único no Brasil','LoungeKey']},
+  nu:{name:'Nubank Ultravioleta',bank:'Nubank',pts:'1 pt/R$1 + cashback',anuidade:'12x R$ 57/mês',vip:'—',isentar:'Zero com R$ 5.000/mês',tags:['Nubank','Cashback','Fácil aprovação']},
+};
+
+// Pontuação conhecida de cartões comuns para comparação
+const knownCards={
+  'nubank':1.0,'nubank ultravioleta':1.0,
+  'c6 carbon':3.5,'c6':2.5,
+  'xp visa infinite':3.0,'xp infinite':3.0,
+  'itaú personnalité':2.0,'itau personnalite':2.0,
+  'bradesco aeternum':4.0,
+  'santander unlimited':3.5,'santander unique':2.0,
+  'inter black':1.0,'inter black win':3.0,
+  'latam pass visa infinite':5.9,'latam pass mastercard':5.25,
+  'tudo azul visa infinite':5.25,'tudo azul':3.0,
+  'smiles visa infinite':5.5,
+  'tap black btg':4.0,
+  'brb dux':5.0,
+};
+
+function getCardScore(cardName){
+  if(!cardName)return null;
+  const key=cardName.toLowerCase().trim();
+  for(const [k,v] of Object.entries(knownCards)){
+    if(key.includes(k))return v;
+  }
+  return null;
+}
+
+function getRecommendations(a){
+  let top=[];
+  const b=a.beneficio||'';
+  const cia=a.cia||'';
+  const gasto=a.gasto||'';
+  const anuidade=a.anuidade||'';
+
+  if(cia==='LATAM') top=[cardDB.latam_vi,cardDB.latam_mb,cardDB.c6];
+  else if(cia==='Azul') top=[cardDB.azul,cardDB.c6,cardDB.xp];
+  else if(cia==='GOL') top=[cardDB.smiles,cardDB.c6,cardDB.s_unique];
+  else if(cia==='TAP ou outras internacionais') top=[cardDB.tap,cardDB.aa,cardDB.c6];
+  else top=[cardDB.c6,cardDB.xp,cardDB.s_unique];
+
+  if(b==='Zero anuidade — não quero pagar nada') top=[cardDB.xp,cardDB.inter,cardDB.tap];
+  else if(b==='Cartão fácil de conseguir agora') top=[cardDB.c6,cardDB.inter,cardDB.s_unique];
+  else if(b==='Acesso a sala VIP no aeroporto'&&(gasto.includes('10.000')||gasto.includes('5.000'))) top=[cardDB.brb_dux,cardDB.s_unlimited,top[0]||cardDB.c6];
+
+  if(anuidade==='Não — quero gratuito ou com isenção'&&!b.includes('Zero')){
+    if(!top.find(c=>c.anuidade==='Zero')) top=[cardDB.xp,cardDB.inter,...top.slice(0,1)];
+  }
+
+  const seen=new Set();const result=[];
+  for(const c of top){if(!seen.has(c.name)){seen.add(c.name);result.push(c)}if(result.length===3)break}
+  const fallbacks=[cardDB.c6,cardDB.xp,cardDB.s_unique,cardDB.tap,cardDB.inter];
+  for(const f of fallbacks){if(result.length>=3)break;if(!seen.has(f.name)){seen.add(f.name);result.push(f)}}
+  return result;
+}
+
+function getAnalysis(a,name,cards){
+  const temBlack=a.tem_black==='Sim, já tenho um';
+  const cartaoAtual=a.qual_cartao||'';
+  const score=getCardScore(cartaoAtual);
+  const melhorScore=parseFloat(cards[0].pts);
+  const b=a.beneficio||'milhas';
+  const cia=a.cia||'';
+  const gasto=a.gasto||'';
+
+  if(temBlack&&cartaoAtual){
+    const gasto_num=gasto.includes('10.000')?10000:gasto.includes('5.000')?7500:gasto.includes('2.000')?3500:1500;
+    if(score&&score<melhorScore){
+      const diff=((melhorScore-score)*gasto_num*12/100).toFixed(0);
+      return `${name}, analisei o seu ${cartaoAtual} e tenho uma notícia importante: ele acumula ${score} pts por dólar, mas com o seu perfil você poderia estar acumulando até ${cards[0].pts} no ${cards[0].name}.\n\nEssa diferença, com o seu gasto mensal, representa cerca de ${Number(diff).toLocaleString('pt-BR')} pontos a mais por ano — o suficiente para 1 passagem nacional ou um bom trecho internacional.\n\nVale a pena avaliar a troca. Os 3 cartões abaixo foram escolhidos especificamente para o seu perfil.`;
+    } else if(score&&score>=melhorScore){
+      return `${name}, boa notícia: o seu ${cartaoAtual} já é um cartão competitivo com ${score} pts por dólar. Para o seu perfil, ele está bem posicionado.\n\nMas listei abaixo 3 opções que podem complementar ou eventualmente superar o que você tem, dependendo de como você usa o cartão no dia a dia.\n\nSe concentrar mais gastos em um único cartão, os benefícios crescem proporcionalmente.`;
+    } else {
+      return `${name}, recebi sua resposta sobre o ${cartaoAtual}. Fiz a análise e selecionei os 3 cartões que mais se encaixam no seu perfil — incluindo uma comparação com o que você tem hoje para você decidir se vale a pena mudar.\n\nA escolha do cartão certo pode fazer uma diferença enorme no longo prazo.`;
+    }
+  }
+
+  return `${name}, aqui estão os 3 cartões que mais se encaixam no seu perfil.\n\nEscolhi esses levando em conta o que você priorizou — ${b.toLowerCase()} — e a ${cia?`sua preferência pela ${cia}`:'flexibilidade de CIA'}. Nada de indicação genérica: esses cartões fazem sentido pro SEU momento.\n\nEscolha o #1 e concentre seus gastos nele. Simples assim.`;
+}
+
+function renderResult(name,analysis,cards,phone){
+  document.getElementById('r-eye').textContent=`Análise de ${name}`;
+  document.getElementById('ai-text').textContent=analysis;
+
+  // Mostra cartão atual se tiver
+  const sec=document.getElementById('card-atual-section');
+  sec.innerHTML='';
+  if(answers.tem_black==='Sim, já tenho um'&&answers.qual_cartao){
+    const score=getCardScore(answers.qual_cartao);
+    const melhor=parseFloat(cards[0].pts);
+    const veredito=score?(score>=melhor?
+      `<span class="verdict-ok">✓ Seu cartão já é competitivo (${score} pts/$)</span>`:
+      `<span class="verdict-up">↑ Você pode acumular mais com o ${cards[0].name}</span>`):
+      `<span class="verdict-up">Veja a comparação abaixo</span>`;
+    sec.innerHTML=`<div class="card-atual-box">
+      <div>
+        <span class="card-atual-label">Seu cartão atual</span>
+        <div class="card-atual-name">${answers.qual_cartao}</div>
+        <div class="card-atual-verdict">${veredito}</div>
+      </div>
+    </div>`;
+  }
+
+  const list=document.getElementById('cards-list');list.innerHTML='';
+  cards.forEach((c,i)=>{
+    const d=document.createElement('div');
+    d.className='c-item'+(i===0?' top':'');
+    d.innerHTML=`${i===0?'<div class="c-badge">#1 Recomendado</div>':''}<div class="c-main"><div class="c-rank">${i+1}</div><div><div class="c-name">${c.name}</div><div class="c-bank">${c.bank}</div><div class="c-tags">${c.tags.map(t=>`<span class="c-tag">${t}</span>`).join('')}</div></div><div class="c-pts"><span class="pts-n">${c.pts}</span><span class="pts-l">por dólar</span></div></div><div class="c-benefits"><div class="c-ben"><span class="ben-l">Sala VIP</span><span class="ben-v">${c.vip}</span></div><div class="c-ben"><span class="ben-l">Anuidade</span><span class="ben-v acc">${c.anuidade}</span></div><div class="c-ben"><span class="ben-l">Como isentar</span><span class="ben-v">${c.isentar}</span></div></div>`;
+    list.appendChild(d);
+  });
+
+  const bancos=Array.isArray(answers.banco)?answers.banco.join(', '):answers.banco||'?';
+  const programas=Array.isArray(answers.programa)?answers.programa.join(', '):answers.programa||'?';
+  const wt=encodeURIComponent(`Oi Éder! Fiz a análise de cartões no site.\n\nBenefício: ${answers.beneficio||'?'} | CIA: ${answers.cia||'?'} | Gasto: ${answers.gasto||'?'} | Bancos: ${bancos} | Programas: ${programas}${answers.qual_cartao?` | Cartão atual: ${answers.qual_cartao}`:''}\n\nCartões indicados: ${cards.map((c,i)=>`${i+1}. ${c.name}`).join(', ')}`);
+  document.getElementById('cta-wpp').href=`https://wa.me/${WHATSAPP}?text=${wt}`;
+  show('s-result');
+}
+</script>
+</body>
+</html>
